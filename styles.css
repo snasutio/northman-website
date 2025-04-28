@@ -1,0 +1,58 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Banner Image */
+  .banner {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background-color: #111;
+  }
+  
+  .navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  .navbar li {
+    margin: 0 20px;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: #aaa;
+  }
+  
+  /* Main content */
+  .intro {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .intro h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .intro p {
+    font-size: 18px;
+    color: #555;
+  }
+  
