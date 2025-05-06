@@ -116,24 +116,23 @@ main {
 /* Shots Grid Page */
 .shots-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 👈 Force exactly 3 columns */
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     padding: 60px 30px;
-    background-color: white;
+    background-color: #f1f5f0; /* soft off-white greenish */
 }
 
 @media (max-width: 1000px) {
   .shots-grid {
-    grid-template-columns: repeat(2, 1fr); /* 👈 2 per row on medium screens */
+    grid-template-columns: repeat(2, 1fr); /* medium screens */
   }
 }
 
 @media (max-width: 600px) {
   .shots-grid {
-    grid-template-columns: 1fr; /* 👈 1 per row on small screens like phones */
+    grid-template-columns: 1fr; /* phones */
   }
 }
-
 
 .shot {
     display: flex;
@@ -144,7 +143,7 @@ main {
 
 .shot img {
     width: 100%;
-    height: auto;
+    max-width: 400px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 15px;
@@ -153,7 +152,7 @@ main {
 .shot p {
     font-size: clamp(14px, 1.5vw, 18px);
     color: #333;
-    line-height: 1.4;
+    line-height: 1.6;
 }
 
 /* Shots page title section */
@@ -161,15 +160,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 30vh; /* controls vertical spacing */
-    background-color: white;
+    min-height: 30vh;
+    background-color: #f1f5f0;
 }
 
 /* Shots page title */
 .shots-title {
-    font-size: clamp(48px, 8vw, 100px); /* TWICE bigger now */
+    font-size: clamp(48px, 8vw, 100px);
     text-align: center;
     color: #222;
 }
-
-
