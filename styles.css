@@ -46,7 +46,7 @@ nav {
 
 /* Main section */
 main {
-    background-color: white;
+    background-color: #eef0ea;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -59,7 +59,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 60px; /* more breathing room */
+    gap: 60px;
     padding: 60px 30px;
 }
 
@@ -67,10 +67,15 @@ main {
 .summary {
     flex: 1 1 400px;
     max-width: 600px;
-    font-size: clamp(18px, 2vw, 24px); /* responsive, but close to 24px normal */
-    line-height: 1.8; /* more breathing space between lines */
+    font-size: clamp(14px, 1.4vw, 18px);
+    line-height: 1.6;
     color: #333;
+    max-height: 480px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+
 
 /* Movie Card */
 .movie-card {
@@ -90,7 +95,7 @@ main {
 .poster {
     width: 100%;
     height: auto;
-    max-height: 500px; /* bigger poster */
+    max-height: 500px;
     margin-top: 20px;
     object-fit: contain;
 }
@@ -116,44 +121,70 @@ main {
 /* Shots Grid Page */
 .shots-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    padding: 60px 30px;
-    background-color: #f1f5f0; /* soft off-white greenish */
-}
-
-@media (max-width: 1000px) {
-  .shots-grid {
-    grid-template-columns: repeat(2, 1fr); /* medium screens */
-  }
-}
-
-@media (max-width: 600px) {
-  .shots-grid {
-    grid-template-columns: 1fr; /* phones */
-  }
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #eef0ea;
+    justify-items: center;
 }
 
 .shot {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
+    max-width: 360px;
+    width: 100%;
 }
 
 .shot img {
     width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 15px;
+    max-width: 360px;
+    border-radius: 0;
+    object-fit: cover;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .shot p {
     font-size: clamp(14px, 1.5vw, 18px);
     color: #333;
     line-height: 1.6;
+    width: 100%;
+    margin-top: 8px;
 }
+
+.shot-label {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+    align-self: flex-start;
+}
+
+.title-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: clamp(16px, 2.2vw, 24px);
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    background: none;
+    padding: 0;
+}
+
+.banner {
+    position: relative;
+}
+
 
 /* Shots page title section */
 .shots-header {
@@ -161,7 +192,7 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 30vh;
-    background-color: #f1f5f0;
+    background-color: #eef0ea;
 }
 
 /* Shots page title */
